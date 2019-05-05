@@ -42,7 +42,7 @@ header{
   color: #fff;
   background-size: cover;
   background-position: center center;
-  min-height: 20vw;
+  min-height: 50vw;
 }
 
 header a {
@@ -77,42 +77,6 @@ nav .menu .current-menu-item a {
   border-right: .3em solid red;
 }
 
-.sub-menu{
-  list-style-type: none;
-  margin: 0;
-  padding-left: 1em;
-}
-
-.sub-menu * {
-  transition: all .5s ease-out;
-}
-
-.sub-menu.menu-verbergen{
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-  padding: 0;
-  border-width: 0;
-}
-
-.menu-item-has-children>a.menu-is-open {
-  padding-top: .25em;
-}
-.menu-item-has-children>a::before{
-  content: '\25BC';
-  margin-right: 2em;
-}
-
-.menu-item-has-children>a.menu-is-open::before{
-  content: '\25B2';
-  margin-right: 2em;
-}
-
-.sub-menu a {
-  border-left: 1em solid blue;
-  display: none;
-}
-
 @media screen and (min-width: 850px){
 nav ul.menu{
   display: grid;
@@ -126,10 +90,6 @@ nav ul.menu a{
 nav #menu-extra-menu a{
   font-size: .8em;
 }
-}
-
-.sub-menu{
-  position: absolute;
 }
 
 footer{
