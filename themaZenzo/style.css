@@ -6,10 +6,8 @@ Version: 1.0
 
 
  */
-
-
-body{
-  font-family: sans-serif;
+body {
+  font-family: 'Roboto', sans-serif;
   color: #333;
   margin: 0;
   min-height: 100vh;
@@ -17,17 +15,19 @@ body{
   grid-template-rows: auto 1fr auto;
 }
 
-a{
+a {
   color: dodgerblue;
 }
 
-.bericht{
+.bericht {
   border-bottom: 6px double royalblue;
 }
-.bericht:nth-last-of-type{
-border-bottom: 0;
+
+.bericht:nth-last-of-type {
+  border-bottom: 0;
 }
-.container{
+
+.container {
   padding: 0 2em;
   max-width: 800px;
   margin-left: auto;
@@ -37,7 +37,8 @@ border-bottom: 0;
 .container img {
   max-width: 100%;
 }
-header{
+
+header {
   background: dodgerblue;
   color: #fff;
   background-size: cover;
@@ -45,22 +46,35 @@ header{
   min-height: 20vw;
 }
 
-header a {
-    color: #fff;
+header p, h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
 }
 
-nav{
+header>.container>a {
+  text-decoration: none;
+}
+
+header>.container>a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+header a {
+  color: #fff;
+}
+
+nav {
   margin-left: -2em;
   margin-right: -2em;
 }
 
-nav ul.menu{
+nav ul.menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 1.3em;
-
 }
+
 nav .menu a {
   text-decoration: none;
   display: block;
@@ -68,6 +82,7 @@ nav .menu a {
   padding: .5em 2em;
   border-bottom: 1px solid #eee;
 }
+
 nav .menu a:hover {
   background-color: blue;
 }
@@ -77,7 +92,7 @@ nav .menu .current-menu-item a {
   border-right: .3em solid red;
 }
 
-.sub-menu{
+.sub-menu {
   list-style-type: none;
   margin: 0;
   padding-left: 1em;
@@ -87,7 +102,7 @@ nav .menu .current-menu-item a {
   transition: all .5s ease-out;
 }
 
-.sub-menu.menu-verbergen{
+.sub-menu.menu-verbergen {
   height: 0;
   font-size: 0;
   line-height: 0;
@@ -98,12 +113,13 @@ nav .menu .current-menu-item a {
 .menu-item-has-children>a.menu-is-open {
   padding-top: .25em;
 }
-.menu-item-has-children>a::before{
+
+.menu-item-has-children>a::before {
   content: '\25BC';
   margin-right: 2em;
 }
 
-.menu-item-has-children>a.menu-is-open::before{
+.menu-item-has-children>a.menu-is-open::before {
   content: '\25B2';
   margin-right: 2em;
 }
@@ -113,30 +129,89 @@ nav .menu .current-menu-item a {
   display: none;
 }
 
-@media screen and (min-width: 850px){
-nav ul.menu{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+aside h4 {
+  color: royalblue;
 }
 
-nav ul.menu a{
-  border-right: 1px solid #eee;
+.screen-reader-text {
+  display: none;
 }
 
-nav #menu-extra-menu a{
+.postMetaData{
   font-size: .8em;
-}
+  color: #aaa;
 }
 
-.sub-menu{
+.postMetaData a{
+  color: #aaa;
+}
+
+.postMetaData:hover{
+  color: royalblue;
+}
+.postMetaData ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.postMetaData li{
+  display: inline;
+}
+
+.postMetaData li::after{
+  content: " | ";
+}
+@media screen and (min-width: 850px) {
+
+  body>.container {
+    border-right: 1px solid royalblue;
+  }
+  header .container {
+    border-right: 1px solid #eee;
+    min-height: 20vw;
+    margin-bottom: -2em;
+  }
+
+  nav ul.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+  }
+
+  nav ul.menu a {
+    border-right: 1px solid #eee;
+  }
+
+  nav ul.menu {
+    border-left: 1px solid #eee;
+  }
+
+  nav #menu-extra-menu a {
+    font-size: .8em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 5em;
+  }
+
+  aside {
+    border-right: 1px solid royalblue;
+    margin-right: -2em;
+  }
+}
+
+.sub-menu {
   position: absolute;
 }
 
-footer{
+footer {
   background: royalblue;
   color: #fff;
 }
 
-footer a{
+footer a {
   color: #fff;
 }

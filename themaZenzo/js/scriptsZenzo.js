@@ -12,3 +12,8 @@ for(let i=0; i<heeftSubmenu.length; i++){
     linkSubMenu.classList.toggle('menu-is-open');
   })
 }
+
+
+let zoekVenster = document.getElementById('s');
+zoekVenster.setAttribute('placeholder', 'Zoeken...');
+zoekVenster.setAttribute('type', 'search');

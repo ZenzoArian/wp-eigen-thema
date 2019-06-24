@@ -14,9 +14,7 @@ if (have_posts()) :
   ?>
 
   <article class="bericht">
-
-
-  <a href="<?php the_permalink() ?>"><h2><?php the_title ?></h2></a>
+  <h2><?php the_title ?></h2>
   <h2><?php the_title(); ?></h2>
   <?php the_content() ?>
 
